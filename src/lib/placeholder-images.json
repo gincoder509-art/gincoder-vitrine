@@ -3,20 +3,20 @@
     {
       "id": "gincoder-hero",
       "description": "Person scanning a QR code for a business",
-      "imageUrl": "https://images.unsplash.com/photo-1559131397-f94da358f7ca?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxxciUyMGNvZGUlMjBidXNpbmVzc3xlbnwwfHx8fDE3NjkyODgxNzR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1564931768730-7e4d8e240044?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxxciUyMGNvZGUlMjBidXNpbmVzc3xlbnwwfHx8fDE3NjkyODgxNzR8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "qr code business"
     },
     {
       "id": "gincoder-presentation",
       "description": "A professional looking mobile website design on a phone",
-      "imageUrl": "https://images.unsplash.com/photo-1648749708402-258067057eb1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8d2Vic2l0ZSUyMG1vYmlsZXxlbnwwfHx8fDE3NjkyODgxNzR8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "website mobile"
+      "imageUrl": "https://images.unsplash.com/photo-1651058987994-3578319dc0df?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtb2JpbGUlMjB3ZWJzaXRlfGVufDB8fHx8MTc2OTI4ODYzOXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "mobile website"
     },
     {
       "id": "gincoder-demo",
       "description": "Illustration of a client interacting with a smartphone",
-      "imageUrl": "https://images.unsplash.com/photo-1758686254023-09e191043c88?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxzbWFydHBob25lJTIwaW50ZXJhY3Rpb258ZW58MHx8fHwxNzY5Mjg4MTc0fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "smartphone interaction"
+      "imageUrl": "https://images.unsplash.com/photo-1691935152212-596d5ee37383?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwZXJzb24lMjBzY2FubmluZyUyMHFyfGVufDB8fHx8MTc2OTI4ODYzOXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person scanning qr"
     }
   ]
 }
