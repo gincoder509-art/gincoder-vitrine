@@ -2,7 +2,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import {
   Laptop,
   QrCode,
@@ -13,11 +12,21 @@ import {
   MoveRight,
 } from 'lucide-react';
 
-const heroImage = PlaceHolderImages.find((p) => p.id === 'gincoder-hero')!;
-const presentationImage = PlaceHolderImages.find(
-  (p) => p.id === 'gincoder-presentation'
-)!;
-const demoImage = PlaceHolderImages.find((p) => p.id === 'gincoder-demo')!;
+const heroImage = {
+  imageUrl:
+    'https://media.istockphoto.com/id/1306107688/photo/woman-with-mobile-phone-checking-into-venue-scanning-qr-code-during-health-pandemic.jpg?s=612x612&w=0&k=20&c=2AZCblp7c_MvqDmrlZPkWB3u76Tv6nGMK_aWLnVKN6M=',
+  description: 'Service numérique professionnel',
+};
+const presentationImage = {
+  imageUrl:
+    'https://htmlburger.com/blog/wp-content/uploads/2024/12/galvin-restaurants-classic-british-restaurant-group-mobile-website-design.webp',
+  description: 'Personne scannant un QR code avec smartphone',
+};
+const demoImage = {
+  imageUrl:
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS250sJ00RZ4kSlQqBKglYqMTlMIk9yNK_M6eIywCsjZQ&s=10',
+  description: 'Interaction client via smartphone',
+};
 
 const offers = [
   {
@@ -89,7 +98,16 @@ const contactInfo = [
   {
     icon: <Briefcase className="h-8 w-8 text-primary" />,
     title: 'Portfolio',
-    content: <span className="italic text-muted-foreground">Bientôt disponible</span>,
+    content: (
+      <a
+        href="https://aquamarine-melomakarona-53681d.netlify.app/fr"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:text-primary hover:underline"
+      >
+        Voir le portfolio
+      </a>
+    ),
   },
 ];
 
@@ -105,7 +123,6 @@ export default function Home() {
           <Image
             src={heroImage.imageUrl}
             alt={heroImage.description}
-            data-ai-hint={heroImage.imageHint}
             fill
             className="object-cover"
             priority
@@ -113,7 +130,13 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/20" />
         </div>
         <div className="relative z-10 flex flex-col items-center p-4 text-center text-white">
-          <Image src="/assets/Logo.png" alt="Gincoder Logo" width={80} height={80} className="mb-4 h-20 w-20" />
+          <Image
+            src="/assets/Logo.png"
+            alt="Gincoder Logo"
+            width={80}
+            height={80}
+            className="mb-4 h-20 w-20"
+          />
           <h1 className="font-headline text-5xl font-bold tracking-tighter text-white drop-shadow-lg md:text-7xl">
             Gincoder Multi-Service
           </h1>
@@ -157,7 +180,6 @@ export default function Home() {
               <Image
                 src={presentationImage.imageUrl}
                 alt={presentationImage.description}
-                data-ai-hint={presentationImage.imageHint}
                 width={800}
                 height={600}
                 className="object-cover transition-transform duration-500 hover:scale-105"
@@ -205,7 +227,6 @@ export default function Home() {
             <Image
               src={demoImage.imageUrl}
               alt={demoImage.description}
-              data-ai-hint={demoImage.imageHint}
               width={800}
               height={600}
               className="object-cover transition-transform duration-500 hover:scale-105"
