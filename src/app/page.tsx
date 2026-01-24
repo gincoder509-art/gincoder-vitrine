@@ -85,13 +85,26 @@ const contactInfo = [
     icon: <Phone className="h-8 w-8 text-primary" />,
     title: 'Téléphone',
     content: (
-      <div className="flex flex-col gap-1">
-        <a href="tel:+50941704583" className="hover:text-primary hover:underline">
-          Natcom (+509 4170-4583)
-        </a>
-        <a href="tel:+50944539500" className="hover:text-primary hover:underline">
-          Digicel (+509 4453-9500)
-        </a>
+      <div className="flex w-full flex-col gap-3">
+        <Button
+          asChild
+          className="w-full bg-gradient-to-r from-yellow-300 to-green-500 font-bold text-white transition-transform hover:scale-105"
+        >
+          <a href="tel:+50941704583">
+            <Phone />
+            Appel Natcom
+          </a>
+        </Button>
+        <Button
+          asChild
+          variant="outline"
+          className="w-full border-red-600 bg-transparent text-red-600 font-bold transition-colors hover:scale-105 hover:bg-red-600 hover:text-white"
+        >
+          <a href="tel:+50944539500">
+            <Phone />
+            Appel Digicel
+          </a>
+        </Button>
       </div>
     ),
   },
@@ -311,7 +324,7 @@ export default function Home() {
                     {item.title}
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="p-0 pt-4">
+                <CardContent className="w-full p-0 pt-4">
                   <div className="text-base text-muted-foreground">
                     {item.content}
                   </div>
