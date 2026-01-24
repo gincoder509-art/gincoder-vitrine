@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { QrCode } from 'lucide-react';
+import Image from 'next/image';
 
 export function Footer() {
   return (
@@ -7,7 +7,7 @@ export function Footer() {
       <div className="container py-8 text-center text-sm text-muted-foreground">
         <div className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:justify-between">
           <Link href="/" className="flex items-center space-x-2">
-            <QrCode className="h-6 w-6 text-primary" />
+            <Image src="/assets/Logo.png" alt="Gincoder Logo" width={24} height={24} className="h-6 w-6" />
             <span className="font-headline text-base font-bold text-foreground">
               Gincoder Multi-Service
             </span>

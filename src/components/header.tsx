@@ -2,7 +2,8 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { QrCode, Menu } from 'lucide-react';
+import Image from 'next/image';
+import { Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 
@@ -20,8 +21,8 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
         <Link href="/" className="mr-6 flex items-center space-x-2">
-          <QrCode className="h-6 w-6 text-primary" />
-          <span className="font-headline text-lg font-bold">
+          <Image src="/assets/Logo.png" alt="Gincoder Logo" width={28} height={28} className="h-7 w-7" />
+          <span className="hidden font-headline text-lg font-bold sm:inline-block">
             Gincoder M-S
           </span>
         </Link>
@@ -59,7 +60,7 @@ export function Header() {
                   className="mb-8 flex items-center"
                   onClick={() => setIsOpen(false)}
                 >
-                  <QrCode className="mr-2 h-6 w-6 text-primary" />
+                  <Image src="/assets/Logo.png" alt="Gincoder Logo" width={28} height={28} className="mr-2 h-7 w-7" />
                   <span className="font-headline text-lg font-bold">Gincoder Multi-Service</span>
                 </Link>
                 <div className="flex flex-col gap-4">

@@ -113,7 +113,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/20" />
         </div>
         <div className="relative z-10 flex flex-col items-center p-4 text-center text-white">
-          <QrCode className="mb-4 h-16 w-16 text-white" />
+          <Image src="/assets/Logo.png" alt="Gincoder Logo" width={80} height={80} className="mb-4 h-20 w-20" />
           <h1 className="font-headline text-5xl font-bold tracking-tighter text-white drop-shadow-lg md:text-7xl">
             Gincoder Multi-Service
           </h1>
