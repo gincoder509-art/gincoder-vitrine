@@ -1,28 +1,22 @@
 {
   "placeholderImages": [
     {
-      "id": "hero-background",
-      "description": "Abstract background for hero section",
-      "imageUrl": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxhYnN0cmFjdCUyMHRlY2h8ZW58MHx8fHwxNzY5Mjg3MzA1fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "abstract tech"
+      "id": "gincoder-hero",
+      "description": "Person scanning a QR code for a business",
+      "imageUrl": "https://images.unsplash.com/photo-1559131397-f94da358f7ca?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxxciUyMGNvZGUlMjBidXNpbmVzc3xlbnwwfHx8fDE3NjkyODgxNzR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "qr code business"
     },
     {
-      "id": "feature-image-1",
-      "description": "Image for a feature section",
-      "imageUrl": "https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx0ZWFtJTIwY29sbGFib3JhdGlvbnxlbnwwfHx8fDE3NjkyNjQwMTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "team collaboration"
+      "id": "gincoder-presentation",
+      "description": "A professional looking mobile website design on a phone",
+      "imageUrl": "https://images.unsplash.com/photo-1648749708402-258067057eb1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8d2Vic2l0ZSUyMG1vYmlsZXxlbnwwfHx8fDE3NjkyODgxNzR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "website mobile"
     },
     {
-      "id": "video-thumbnail",
-      "description": "Thumbnail for a video player",
-      "imageUrl": "https://images.unsplash.com/photo-1580894912989-0bc892f4efd0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxzb2Z0d2FyZSUyMGNvZGV8ZW58MHx8fHwxNzY5MjU4MzU5fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "software code"
-    },
-    {
-      "id": "avatar-1",
-      "description": "Avatar for a testimonial",
-      "imageUrl": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxwZXJzb24lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjkxNzMxMTN8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "person portrait"
+      "id": "gincoder-demo",
+      "description": "Illustration of a client interacting with a smartphone",
+      "imageUrl": "https://images.unsplash.com/photo-1758686254023-09e191043c88?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxzbWFydHBob25lJTIwaW50ZXJhY3Rpb258ZW58MHx8fHwxNzY5Mjg4MTc0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "smartphone interaction"
     }
   ]
 }

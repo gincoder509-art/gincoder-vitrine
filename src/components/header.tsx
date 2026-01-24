@@ -2,14 +2,14 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { CodeXml, Menu } from 'lucide-react';
+import { QrCode, Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 
 const navLinks = [
-  { href: '#features', label: 'Features' },
-  { href: '#services', label: 'Services' },
-  { href: '#about', label: 'About' },
+  { href: '#presentation', label: 'Présentation' },
+  { href: '#offers', label: 'Services' },
+  { href: '#demo', label: 'Fonctionnement' },
   { href: '#contact', label: 'Contact' },
 ];
 
@@ -21,8 +21,10 @@ export function Header() {
       <div className="container flex h-14 max-w-screen-2xl items-center">
         <div className="mr-4 flex">
           <Link href="/" className="mr-6 flex items-center space-x-2">
-            <CodeXml className="h-6 w-6 text-primary" />
-            <span className="font-bold sm:inline-block">Gincoder</span>
+            <QrCode className="h-6 w-6 text-primary" />
+            <span className="font-bold sm:inline-block">
+              Gincoder Multi-Service
+            </span>
           </Link>
           <nav className="hidden gap-6 md:flex">
             {navLinks.map((link) => (
@@ -38,8 +40,9 @@ export function Header() {
         </div>
 
         <div className="flex flex-1 items-center justify-end space-x-2">
-          <Button variant="ghost">Log In</Button>
-          <Button>Get Started</Button>
+          <Button asChild>
+            <Link href="#cta">Commander</Link>
+          </Button>
         </div>
 
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
@@ -49,7 +52,7 @@ export function Header() {
               className="ml-2 px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 md:hidden"
             >
               <Menu className="h-5 w-5" />
-              <span className="sr-only">Toggle Menu</span>
+              <span className="sr-only">Ouvrir le menu</span>
             </Button>
           </SheetTrigger>
           <SheetContent side="left" className="pr-0">
@@ -58,8 +61,8 @@ export function Header() {
               className="mb-6 flex items-center"
               onClick={() => setIsOpen(false)}
             >
-              <CodeXml className="mr-2 h-6 w-6 text-primary" />
-              <span className="font-bold">Gincoder</span>
+              <QrCode className="mr-2 h-6 w-6 text-primary" />
+              <span className="font-bold">Gincoder MS</span>
             </Link>
             <div className="flex flex-col space-y-3">
               {navLinks.map((link) => (
