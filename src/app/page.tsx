@@ -68,17 +68,20 @@ const demoSteps = [
   },
 ];
 
+const whatsappLink =
+  "https://wa.me/50933377934?text=Bonjour%2C%20je%20suis%20intéressé%20par%20votre%20service%20de%20site%20web%20%2B%20QR%20code.%20J%27aimerais%20avoir%20plus%20d%27informations.";
+const qrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(whatsappLink)}`;
+
 const contactInfo = [
   {
     icon: <Mail className="h-8 w-8 text-primary" />,
     title: 'Email',
     content: (
-      <a
-        href="mailto:gincoder-ms@outlook.fr"
-        className="break-all hover:text-primary hover:underline"
-      >
-        gincoder-ms@outlook.fr
-      </a>
+      <Button asChild className="w-full">
+        <a href="mailto:gincoder-ms@outlook.fr">
+          <Mail className="mr-2 h-4 w-4" /> Envoyer un e-mail
+        </a>
+      </Button>
     ),
   },
   {
@@ -98,7 +101,7 @@ const contactInfo = [
         <Button
           asChild
           variant="outline"
-          className="w-full border-red-600 bg-transparent text-red-600 font-bold transition-colors hover:scale-105 hover:bg-red-600 hover:text-white"
+          className="w-full border-red-600 bg-transparent font-bold text-red-600 transition-colors hover:scale-105 hover:bg-red-600 hover:text-white"
         >
           <a href="tel:+50944539500">
             <Phone />
@@ -112,17 +115,38 @@ const contactInfo = [
     icon: <Briefcase className="h-8 w-8 text-primary" />,
     title: 'Portfolio',
     content: (
-      <a
-        href="https://aquamarine-melomakarona-53681d.netlify.app/fr"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="hover:text-primary hover:underline"
-      >
-        Voir le portfolio
-      </a>
+      <Button asChild variant="outline" className="w-full">
+        <a
+          href="https://aquamarine-melomakarona-53681d.netlify.app/fr"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Briefcase className="mr-2 h-4 w-4" /> Voir le portfolio
+        </a>
+      </Button>
+    ),
+  },
+  {
+    icon: <QrCode className="h-8 w-8 text-primary" />,
+    title: 'WhatsApp Direct',
+    content: (
+      <div className="flex flex-col items-center gap-2">
+        <div className="rounded-lg bg-white p-2">
+          <Image
+            src={qrCodeUrl}
+            alt="QR Code pour WhatsApp"
+            width={128}
+            height={128}
+          />
+        </div>
+        <p className="text-xs text-muted-foreground">
+          Scannez pour discuter sur WhatsApp
+        </p>
+      </div>
     ),
   },
 ];
+
 
 export default function Home() {
   return (
@@ -285,7 +309,7 @@ export default function Home() {
             className="mt-8 bg-white text-primary hover:bg-white/90"
           >
             <a
-              href="https://wa.me/50933377934?text=Bonjour%2C%20je%20suis%20intéressé%20par%20votre%20service%20de%20site%20web%20%2B%20QR%20code.%20J%27aimerais%20avoir%20plus%20d%27informations."
+              href={whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2"
@@ -313,7 +337,7 @@ export default function Home() {
               Contactez-nous
             </h2>
           </div>
-          <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-3">
+          <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
             {contactInfo.map((item, i) => (
               <Card key={i} className="flex flex-col items-center p-6 text-center">
                 <CardHeader className="items-center gap-4 p-0">
@@ -324,8 +348,8 @@ export default function Home() {
                     {item.title}
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="w-full p-0 pt-4">
-                  <div className="text-base text-muted-foreground">
+                <CardContent className="flex w-full flex-grow items-center p-0 pt-4">
+                  <div className="w-full text-base text-muted-foreground">
                     {item.content}
                   </div>
                 </CardContent>
