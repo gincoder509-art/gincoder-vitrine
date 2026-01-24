@@ -254,6 +254,18 @@ export default function Home() {
               </Card>
             ))}
           </div>
+          <div className="mt-16 text-center">
+            <Button asChild size="lg">
+              <Link
+                href="https://aquamarine-melomakarona-53681d.netlify.app/fr/services"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Voir les services et tarifs{' '}
+                <MoveRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+          </div>
         </div>
       </section>
 
