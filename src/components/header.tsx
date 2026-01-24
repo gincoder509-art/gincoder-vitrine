@@ -17,6 +17,11 @@ const navLinks = [
   { href: '#presentation', label: 'Présentation' },
   { href: '#offers', label: 'Services' },
   { href: '#demo', label: 'Fonctionnement' },
+  {
+    href: 'https://aquamarine-melomakarona-53681d.netlify.app/fr',
+    label: 'Portfolio',
+    external: true,
+  },
   { href: '#contact', label: 'Contact' },
 ];
 
@@ -43,6 +48,8 @@ export function Header() {
             <Link
               key={link.href}
               href={link.href}
+              target={link.external ? '_blank' : undefined}
+              rel={link.external ? 'noopener noreferrer' : undefined}
               className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
             >
               {link.label}
@@ -91,6 +98,8 @@ export function Header() {
                     <Link
                       key={link.href}
                       href={link.href}
+                      target={link.external ? '_blank' : undefined}
+                      rel={link.external ? 'noopener noreferrer' : undefined}
                       onClick={() => setIsOpen(false)}
                       className="text-lg font-medium text-muted-foreground transition-colors hover:text-foreground"
                     >
