@@ -10,63 +10,104 @@ import {
   Phone,
   Briefcase,
   MoveRight,
+  HelpCircle,
 } from 'lucide-react';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
+import type { Metadata } from 'next';
+import { siteConfig } from '@/config/site';
+import { WebPage, Service, BreadcrumbList } from 'schema-dts';
+import { JsonLd } from '@/components/json-ld';
 
-const heroImage = {
-  imageUrl:
-    'https://media.istockphoto.com/id/1306107688/photo/woman-with-mobile-phone-checking-into-venue-scanning-qr-code-during-health-pandemic.jpg?s=612x612&w=0&k=20&c=2AZCblp7c_MvqDmrlZPkWB3u76Tv6nGMK_aWLnVKN6M=',
-  description: 'Service numérique professionnel',
+export const metadata: Metadata = {
+  title: `Accueil - ${siteConfig.name}`,
+  description: `Gincoder Multi-Service : Votre partenaire pour la création de sites web professionnels et QR codes intelligents en Haïti. Améliorez votre visibilité et facilitez l'interaction client.`,
+  alternates: {
+    canonical: siteConfig.url,
+  },
 };
-const presentationImage = {
-  imageUrl:
-    'https://htmlburger.com/blog/wp-content/uploads/2024/12/galvin-restaurants-classic-british-restaurant-group-mobile-website-design.webp',
-  description: 'Personne scannant un QR code avec smartphone',
-};
-const demoImage = {
-  imageUrl:
-    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS250sJ00RZ4kSlQqBKglYqMTlMIk9yNK_M6eIywCsjZQ&s=10',
-  description: 'Interaction client via smartphone',
-};
+
+const heroImage = PlaceHolderImages.find((p) => p.id === 'gincoder-hero')!;
+const presentationImage = PlaceHolderImages.find(
+  (p) => p.id === 'gincoder-presentation'
+)!;
+const demoImage = PlaceHolderImages.find((p) => p.id === 'gincoder-demo')!;
 
 const offers = [
   {
     icon: <Laptop className="h-8 w-8 text-primary" />,
-    title: 'Site web simple et publicitaire',
+    title: 'Site Web Vitrine sur Mesure',
     description:
-      'Une vitrine numérique professionnelle qui présente votre activité de manière claire et attractive.',
+      'Un site web professionnel, rapide et responsive, optimisé pour le référencement (SEO) afin de garantir une visibilité maximale sur Google. Présentez votre activité de manière claire et attractive.',
   },
   {
     icon: <QrCode className="h-8 w-8 text-primary" />,
-    title: 'QR code propre',
+    title: 'QR Code Personnalisé et Dynamique',
     description:
-      'Un QR code élégant et personnalisé, prêt à être scanné pour accéder directement à votre site web.',
+      "Un QR code au design soigné intégrant votre logo. Il redirige instantanément vers votre site, votre contact WhatsApp ou toute autre destination, facilitant la connexion avec vos clients.",
   },
   {
     icon: <Package className="h-8 w-8 text-primary" />,
-    title: "QR code libre d'intégration",
+    title: "Stratégie d'Intégration Complète",
     description:
-      'Utilisez votre QR code partout : carte de visite, affiche, flyer, t-shirt, casquette, sticker, vitrine, et bien plus encore.',
+      'Utilisez votre QR code sur tous vos supports de communication : cartes de visite, affiches, emballages, véhicules. Nous vous conseillons pour maximiser son impact.',
   },
 ];
 
 const demoSteps = [
   {
     number: '1',
-    title: 'Scanner',
-    description: 'Votre client scanne le QR code avec son smartphone.',
+    title: 'Scanner le QR Code',
+    description:
+      'Votre client découvre votre QR Code sur une carte de visite, une affiche ou votre vitrine et le scanne instantanément avec son smartphone.',
   },
   {
     number: '2',
-    title: 'Accéder',
-    description: 'Il accède instantanément à votre site web vitrine.',
+    title: 'Accéder au Site Web',
+    description:
+      'Il est redirigé vers votre site vitrine professionnel où il découvre vos services, votre histoire et vos informations de contact de manière engageante.',
   },
   {
     number: '3',
-    title: 'Contacter',
+    title: 'Initier le Contact',
     description:
-      'Un simple clic sur le bouton WhatsApp et le message est pré-rempli, prêt à être envoyé.',
+      "D'un simple clic sur le bouton WhatsApp, un message pré-rempli s'ouvre, prêt à être envoyé. Le client entre en contact sans friction, augmentant vos chances de conversion.",
   },
 ];
+
+const faqItems = [
+  {
+    question: "Pourquoi ai-je besoin d'un site web si j'ai déjà une page Facebook ?",
+    answer:
+      "Une page Facebook est un excellent outil, mais un site web vous appartient entièrement. Il vous offre un contrôle total sur votre image de marque, une crédibilité professionnelle accrue et de meilleures chances d'être trouvé sur Google. C'est votre vitrine numérique ouverte 24/7, un actif essentiel pour toute entreprise sérieuse.",
+  },
+  {
+    question: 'Combien de temps faut-il pour créer mon site et mon QR code ?',
+    answer:
+      'Notre processus est optimisé pour être rapide et efficace. En général, un site vitrine standard et son QR code peuvent être livrés en 1 à 2 semaines, en fonction de la complexité et de la rapidité à laquelle vous nous fournissez le contenu (textes, images).',
+  },
+  {
+    question: "Le QR code expire-t-il ou y a-t-il des frais cachés ?",
+    answer:
+      'Non, le QR code que nous vous fournissons est permanent et n\'expire pas. Il n\'y a aucun frais de maintenance ou de renouvellement pour le QR code lui-même. Il continuera de fonctionner tant que le lien de destination sera actif.',
+  },
+  {
+    question: 'Puis-je mettre à jour mon site web moi-même ?',
+    answer:
+      "Absolument. Sur demande, nous pouvons construire votre site sur un système de gestion de contenu (CMS) simple qui vous permettra de modifier facilement les textes et les images sans aucune connaissance technique. Nous proposons également des forfaits de maintenance si vous préférez nous confier les mises à jour.",
+  },
+  {
+    question: 'Quels sont vos tarifs ?',
+    answer:
+      'Chaque projet est unique. Nous proposons des solutions adaptées à tous les budgets, des PME aux artisans. Le meilleur moyen d\'obtenir une estimation précise est de nous contacter pour une consultation gratuite. Vous pouvez aussi consulter notre page de services pour avoir une idée de nos offres.',
+  },
+];
+
 
 const whatsappLink =
   "https://wa.me/50933377934?text=Bonjour%2C%20je%20suis%20intéressé%20par%20votre%20service%20de%20site%20web%20%2B%20QR%20code.%20J%27aimerais%20avoir%20plus%20d%27informations.";
@@ -151,6 +192,43 @@ const contactInfo = [
 export default function Home() {
   return (
     <div className="flex flex-col">
+       <JsonLd<WebPage>
+        data={{
+          '@context': 'https://schema.org',
+          '@type': 'WebPage',
+          name: 'Accueil - Gincoder Multi-Service',
+          url: siteConfig.url,
+          description: siteConfig.description,
+          isPartOf: { '@id': siteConfig.url },
+        }}
+      />
+      <JsonLd<BreadcrumbList>
+        data={{
+          '@context': 'https://schema.org',
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            {
+              '@type': 'ListItem',
+              position: 1,
+              name: 'Accueil',
+              item: siteConfig.url,
+            },
+          ],
+        }}
+      />
+       <JsonLd<Service>
+        data={{
+          '@context': 'https://schema.org',
+          '@type': 'Service',
+          name: 'Création de Site Web et QR Code',
+          serviceType: 'Développement Web',
+          provider: {
+            '@type': 'Organization',
+            name: 'Gincoder Multi-Service',
+          },
+        }}
+      />
+      
       {/* Hero Section */}
       <section
         id="hero"
@@ -163,6 +241,7 @@ export default function Home() {
             fill
             className="object-cover"
             priority
+            data-ai-hint={heroImage.imageHint}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/20" />
         </div>
@@ -174,18 +253,18 @@ export default function Home() {
             height={80}
             className="mb-4 h-20 w-20"
           />
-          <h1 className="font-headline text-5xl font-bold tracking-tighter text-white drop-shadow-lg md:text-7xl">
-            Gincoder Multi-Service
+          <h1 className="text-5xl font-bold tracking-tighter text-white drop-shadow-lg md:text-7xl">
+            Création de Site Web & QR Codes Intelligents
           </h1>
-          <p className="mt-4 max-w-2xl font-headline text-xl font-semibold text-primary md:text-2xl">
-            Sites web simples, QR codes intelligents
+          <p className="mt-4 max-w-2xl text-xl font-semibold text-primary md:text-2xl">
+            Transformez votre présence numérique en Haïti. Attirez plus de clients avec un site vitrine professionnel et un QR code innovant.
           </p>
           <p className="mt-2 max-w-xl text-lg text-slate-200">
-            Votre présence numérique professionnelle en un clic.
+            Votre crédibilité professionnelle commence ici. Simple, efficace et moderne.
           </p>
           <Button size="lg" asChild className="mt-8">
             <Link href="#cta">
-              Commander le service <MoveRight className="ml-2 h-5 w-5" />
+              Obtenir un Devis Gratuit <MoveRight className="ml-2 h-5 w-5" />
             </Link>
           </Button>
         </div>
@@ -196,21 +275,22 @@ export default function Home() {
         <div className="container">
           <div className="grid grid-cols-1 items-center gap-x-16 gap-y-10 lg:grid-cols-2">
             <div>
-              <h2 className="font-headline text-4xl font-bold tracking-tighter text-foreground sm:text-5xl">
-                Un service complet pour votre visibilité digitale
+              <h2 className="text-4xl font-bold tracking-tighter text-foreground sm:text-5xl">
+                Un Avantage Concurrentiel Pour Votre Entreprise en Haïti
               </h2>
               <p className="mt-6 text-lg text-muted-foreground">
-                Gincoder Multi-Service vous offre une solution clé en main pour
-                établir votre présence en ligne et faciliter le contact avec vos
-                clients. Nous créons pour vous un{' '}
+                Dans un marché de plus en plus digitalisé, se démarquer est essentiel. Gincoder Multi-Service vous offre une solution clé en main pour construire une présence en ligne solide et faciliter le contact avec vos clients.
+              </p>
+              <p className="mt-4 text-lg text-muted-foreground">
+                Nous ne nous contentons pas de créer un{' '}
                 <strong className="font-semibold text-foreground">
                   site web vitrine professionnel
-                </strong>{' '}
-                accompagné d'un{' '}
+                </strong>
+                , nous concevons votre nouvelle carte de visite numérique. Couplé à un{' '}
                 <strong className="font-semibold text-foreground">
                   QR code personnalisé
                 </strong>
-                . Simple, efficace et moderne.
+                , cet écosystème digital transforme la manière dont les clients vous trouvent et interagissent avec vous. C'est l'alliance parfaite entre l'élégance du design et la puissance du marketing direct.
               </p>
             </div>
             <div className="overflow-hidden rounded-lg shadow-xl">
@@ -220,6 +300,7 @@ export default function Home() {
                 width={800}
                 height={600}
                 className="object-cover transition-transform duration-500 hover:scale-105"
+                 data-ai-hint={presentationImage.imageHint}
               />
             </div>
           </div>
@@ -230,9 +311,12 @@ export default function Home() {
       <section id="offers" className="bg-muted/50 py-24 sm:py-32">
         <div className="container">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="font-headline text-4xl font-bold tracking-tighter text-foreground sm:text-5xl">
-              Ce que vous obtenez
+            <h2 className="text-4xl font-bold tracking-tighter text-foreground sm:text-5xl">
+              Nos Solutions Clé-en-Main
             </h2>
+             <p className="mt-4 text-lg text-muted-foreground">
+              Chaque pack est pensé pour maximiser votre retour sur investissement et vous fournir des outils concrets pour votre croissance.
+            </p>
           </div>
           <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-3">
             {offers.map((offer, i) => (
@@ -244,7 +328,7 @@ export default function Home() {
                   <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
                     {offer.icon}
                   </div>
-                  <CardTitle className="font-headline text-xl">
+                  <CardTitle className="text-xl">
                     {offer.title}
                   </CardTitle>
                 </CardHeader>
@@ -279,12 +363,16 @@ export default function Home() {
               width={800}
               height={600}
               className="object-cover transition-transform duration-500 hover:scale-105"
+               data-ai-hint={demoImage.imageHint}
             />
           </div>
           <div>
-            <h2 className="font-headline text-4xl font-bold tracking-tighter text-foreground sm:text-5xl">
-              Comment ça fonctionne ?
+            <h2 className="text-4xl font-bold tracking-tighter text-foreground sm:text-5xl">
+              Un Parcours Client Simplifié
             </h2>
+             <p className="mt-4 text-lg text-muted-foreground">
+              La technologie ne devrait pas être un obstacle, mais un pont. Voici comment nous connectons vos clients à votre entreprise en trois étapes simples.
+            </p>
             <div className="mt-8 flex flex-col gap-6">
               {demoSteps.map((step) => (
                 <div key={step.number} className="flex items-start gap-4">
@@ -304,15 +392,43 @@ export default function Home() {
         </div>
       </section>
 
+       {/* FAQ Section */}
+      <section id="faq" className="bg-muted/50 py-24 sm:py-32">
+        <div className="container max-w-4xl">
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="text-4xl font-bold tracking-tighter text-foreground sm:text-5xl">
+              Questions Fréquemment Posées
+            </h2>
+            <p className="mt-4 text-lg text-muted-foreground">
+              Vous avez des questions ? Nous avons les réponses. Voici les interrogations les plus courantes de nos clients.
+            </p>
+          </div>
+          <Accordion type="single" collapsible className="mt-12 w-full">
+            {faqItems.map((item, i) => (
+              <AccordionItem key={i} value={`item-${i}`}>
+                <AccordionTrigger className="text-left text-lg hover:no-underline">
+                  <div className="flex items-center gap-4">
+                    <HelpCircle className="h-6 w-6 flex-shrink-0 text-primary" />
+                    {item.question}
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent className="text-base text-muted-foreground">
+                  {item.answer}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section id="cta" className="bg-primary text-primary-foreground">
         <div className="container flex flex-col items-center py-20 text-center sm:py-24">
-          <h2 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl">
-            Prêt à démarrer ?
+          <h2 className="text-4xl font-bold tracking-tighter sm:text-5xl">
+            Prêt à Digitaliser Votre Activité ?
           </h2>
           <p className="mt-4 max-w-2xl text-lg text-primary-foreground/80">
-            Contactez-nous dès maintenant pour obtenir votre site web et QR code
-            personnalisés.
+            Ne laissez pas vos concurrents prendre de l'avance. Contactez-nous dès maintenant pour une consultation gratuite et découvrez comment nous pouvons propulser votre entreprise sur le web.
           </p>
           <Button
             size="lg"
@@ -345,9 +461,12 @@ export default function Home() {
       <section id="contact" className="bg-muted/50 py-24 sm:py-32">
         <div className="container">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="font-headline text-4xl font-bold tracking-tighter text-foreground sm:text-5xl">
+            <h2 className="text-4xl font-bold tracking-tighter text-foreground sm:text-5xl">
               Contactez-nous
             </h2>
+             <p className="mt-4 text-lg text-muted-foreground">
+              Un projet en tête ? Une question ? Nous sommes là pour vous aider à concrétiser vos idées.
+            </p>
           </div>
           <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
             {contactInfo.map((item, i) => (
@@ -356,7 +475,7 @@ export default function Home() {
                   <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
                     {item.icon}
                   </div>
-                  <CardTitle className="font-headline text-xl">
+                  <CardTitle className="text-xl">
                     {item.title}
                   </CardTitle>
                 </CardHeader>

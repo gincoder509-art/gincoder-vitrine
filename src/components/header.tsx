@@ -39,7 +39,7 @@ export function Header() {
             height={28}
             className="h-7 w-7"
           />
-          <span className="hidden font-headline text-lg font-bold sm:inline-block">
+          <span className="hidden font-bold sm:inline-block">
             Gincoder M-S
           </span>
         </Link>
@@ -74,7 +74,7 @@ export function Header() {
             </SheetTrigger>
             <SheetContent side="left" className="w-[300px] sm:w-[400px]">
               <SheetHeader>
-                <SheetTitle className="sr-only">Menu de navigation</SheetTitle>
+                <SheetTitle className="sr-only">Menu</SheetTitle>
               </SheetHeader>
               <div className="p-6">
                 <Link
@@ -89,7 +89,7 @@ export function Header() {
                     height={28}
                     className="mr-2 h-7 w-7"
                   />
-                  <span className="font-headline text-lg font-bold">
+                  <span className="font-bold">
                     Gincoder Multi-Service
                   </span>
                 </Link>

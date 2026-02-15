@@ -2,21 +2,21 @@
   "placeholderImages": [
     {
       "id": "gincoder-hero",
-      "description": "Person scanning a QR code for a business",
-      "imageUrl": "https://images.unsplash.com/photo-1564931768730-7e4d8e240044?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxxciUyMGNvZGUlMjBidXNpbmVzc3xlbnwwfHx8fDE3NjkyODgxNzR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "Person scanning a QR code for a business on a phone, with a modern website in the background.",
+      "imageUrl": "https://images.unsplash.com/photo-1605513524042-426bace35fc9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cXIlMjBjb2RlJTIwYnVzaW5lc3N8ZW58MHx8fHwxNzcxMTc0NzUzfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "qr code business"
     },
     {
       "id": "gincoder-presentation",
-      "description": "A professional looking mobile website design on a phone",
-      "imageUrl": "https://images.unsplash.com/photo-1651058987994-3578319dc0df?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtb2JpbGUlMjB3ZWJzaXRlfGVufDB8fHx8MTc2OTI4ODYzOXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "A professional looking mobile website design on a phone, held by a person in a business setting.",
+      "imageUrl": "https://images.unsplash.com/photo-1490222939321-2a267366a124?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtb2JpbGUlMjB3ZWJzaXRlfGVufDB8fHx8MTc3MTE3NDc1M3ww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "mobile website"
     },
     {
       "id": "gincoder-demo",
-      "description": "Illustration of a client interacting with a smartphone",
-      "imageUrl": "https://images.unsplash.com/photo-1691935152212-596d5ee37383?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwZXJzb24lMjBzY2FubmluZyUyMHFyfGVufDB8fHx8MTc2OTI4ODYzOXww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "person scanning qr"
+      "description": "Illustration of a client interacting with a smartphone, showing a seamless user journey.",
+      "imageUrl": "https://images.unsplash.com/photo-1586936893354-362ad6ae47ba?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjdXN0b21lciUyMGpvdXJuZXl8ZW58MHx8fHwxNzcxMTU4MjM5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "customer journey"
     }
   ]
 }
