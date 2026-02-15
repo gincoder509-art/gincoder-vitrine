@@ -21,7 +21,7 @@ export function Footer() {
           <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-4">
             <p>&copy; 2025 Gincoder Multi-Service. Tous droits réservés.</p>
             <Link
-              href="https://aquamarine-melomakarona-53681d.netlify.app/fr"
+              href="https://portfolio.gincoder.online"
               target="_blank"
               rel="noopener noreferrer"
               className="font-medium text-foreground underline-offset-4 hover:underline"

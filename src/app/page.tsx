@@ -117,7 +117,7 @@ const contactInfo = [
     content: (
       <Button asChild variant="outline" className="w-full">
         <a
-          href="https://aquamarine-melomakarona-53681d.netlify.app/fr"
+          href="https://portfolio.gincoder.online"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -257,7 +257,7 @@ export default function Home() {
           <div className="mt-16 text-center">
             <Button asChild size="lg">
               <Link
-                href="https://aquamarine-melomakarona-53681d.netlify.app/fr/services"
+                href="https://portfolio.gincoder.online/services"
                 target="_blank"
                 rel="noopener noreferrer"
               >

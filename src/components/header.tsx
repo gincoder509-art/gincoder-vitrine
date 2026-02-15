@@ -18,7 +18,7 @@ const navLinks = [
   { href: '#offers', label: 'Services' },
   { href: '#demo', label: 'Fonctionnement' },
   {
-    href: 'https://aquamarine-melomakarona-53681d.netlify.app/fr',
+    href: 'https://portfolio.gincoder.online',
     label: 'Portfolio',
     external: true,
   },
