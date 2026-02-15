@@ -23,6 +23,7 @@ import type { Metadata } from 'next';
 import { siteConfig } from '@/config/site';
 import { WebPage, Service, BreadcrumbList, FAQPage } from 'schema-dts';
 import { JsonLd } from '@/components/json-ld';
+import TypewriterHero from '@/components/TypewriterHero';
 
 export const metadata: Metadata = {
   title: `Création Site Web & QR Code Haïti | ${siteConfig.name}`,
@@ -281,11 +282,7 @@ export default function Home() {
           <h1 className="text-5xl font-bold tracking-tighter text-white drop-shadow-lg md:text-7xl">
             Création de Site Web & QR Codes en Haïti
           </h1>
-          <p className="mt-4 max-w-3xl text-xl font-semibold text-primary md:text-2xl">
-            Propulsez votre entreprise en ligne. De la conception de sites
-            vitrines professionnels à la création de QR codes intelligents, nous
-            sommes votre partenaire pour une présence numérique qui convertit.
-          </p>
+          <TypewriterHero />
           <p className="mt-2 max-w-2xl text-lg text-slate-200">
             Attirez, engagez et fidélisez plus de clients grâce à une
             stratégie digitale sur mesure, pensée pour le marché haïtien.
