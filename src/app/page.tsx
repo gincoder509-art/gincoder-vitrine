@@ -275,9 +275,9 @@ export default function Home() {
           <Image
             src="/assets/Logo.png"
             alt="Gincoder Logo"
-            width={80}
-            height={80}
-            className="mb-4 h-20 w-20"
+            width={96}
+            height={96}
+            className="mb-4 h-24 w-24"
           />
           <h1 className="text-5xl font-bold tracking-tighter text-white drop-shadow-lg md:text-7xl">
             Création de Site Web & QR Codes en Haïti
