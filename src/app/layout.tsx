@@ -9,6 +9,7 @@ import { siteConfig } from '@/config/site';
 import { Organization, WebSite } from 'schema-dts';
 import { JsonLd } from '@/components/json-ld';
 import { Analytics } from '@/components/analytics';
+import { Suspense } from 'react';
 
 const ptSans = PT_Sans({
   subsets: ['latin'],
@@ -122,7 +123,9 @@ export default function RootLayout({
           <Footer />
         </div>
         <Toaster />
-        <Analytics />
+        <Suspense fallback={null}>
+          <Analytics />
+        </Suspense>
       </body>
     </html>
   );
